@@ -70,45 +70,67 @@ Aqui precisamos entender exatamente quais informacoes esse sistema vai manipular
 
 ### Pesquisa (search):
 
-    > Em andamento...
+   O controle financeiro funciona mapeando, registrando e categorizando todas as entradas e saídas de dinheiro em um período. 
+   Ele transforma dados de gastos e ganhos em uma visão clara para evitar desperdícios, planejar o futuro e alcançar metas.
+
+   - Como montar um controle financeiro:
+
+        > Anotar ganhos: Registre toda fonte de renda (salário, vendas ou extras).
+        > Separar despesas: Divida os gastos em fixos (aluguel, contas) e variáveis (lazer, compras).
+        > Acompanhar com frequência: Atualize os dados diariamente ou semanalmente.
+        > Analisar os resultados: Veja o que sobra ou falta no fim do mês para ajustar as regras.
+
 
 ### Modelando os dominios de um controle financeiro (dominios/entidades):
 
-    > Em andamento...
+    CONTROLE FINANCEIRO
+        - CONTA
+        - DESPESAS
+        - LANÇAMENTO
+        - USUARIOS
 
 ### Quais informacoes descreve cada entidade/dominio (atributos):
 
-    > Em andamento...
+    CONTA 
+        possui(atributos):
+        - numero;
+        - usuario;
+        - saldo;
+        - despesas;
 
-> Classes Java:
+        tem(metodos):
+        - lancamento;
 
-- Conta:
-    numero;
-    usuario;
-    saldo;
-    lacamento;
+    DESPESASA
+        possui(atributos)
+        - fixas;
+        - variaveis;
+    
+    LANCAMENTO
+        possui(atributos)
+        - totalEntrada
+        - totalSaida
 
-    calcularSaldo()
-    exibirSaldo()
+        tem(métodos):
+        - conta;
 
-- Usuario:
-    identificacao;
-    numero;
+    USUARIO:
+        possui(atributos)
+        - nome;
+        - identificacao;
 
-    criarUsuario()
-
-- Lancamento:
-    totalEntradas;
-    totalSaida;
-
-    registrarEntrada();
-    registrarSaida();
 
 ### Como as entidades se conectam (descobrindo o relacionamentos):
 
 <!-- Relacionamento das entidades. -->
 
-    > Em andamento...
+    [CONTA] > possui > [USUARIO]
+
+    [CONTA] > possui [DESPESAS]
+
+    [LANCAMENTO] > tem [CONTA]
+
+    [CONTA] > TEM [LACAMENTO]
 
 ---
 
