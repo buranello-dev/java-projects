@@ -1,5 +1,7 @@
 package controle_de_gastos.domain;
 
+import java.util.Scanner;
+
 public class Lancamento {
 
     private double totalEntradas;
@@ -11,6 +13,14 @@ public class Lancamento {
 
     public void registrarRenda(double valorRenda) {
         this.totalEntradas = this.totalEntradas + valorRenda;
+    }
+
+    public double getTotalEntradas() {
+        return totalEntradas;
+    }
+
+    public double getTotalSaidas() {
+        return totalSaidas;
     }
 
 }

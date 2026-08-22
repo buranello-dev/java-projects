@@ -7,4 +7,15 @@ public class Conta {
     private double saldo;
     private Despesa despesa;
 
+    public int getNumero() {
+        return numero;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void calcularSaldo(Lancamento lancamento) {
+        this.saldo = lancamento.getTotalEntradas() - lancamento.getTotalSaidas();
+    }
 }
