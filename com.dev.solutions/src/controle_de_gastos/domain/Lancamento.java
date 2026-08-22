@@ -4,7 +4,10 @@ public class Lancamento {
 
     private double totalEntradas;
     private double totalSaidas;
-    private double valorEntrada;
-    private double valorSaida;
+
+    public void registrarDespesa(double valorDespesa) {
+        this.totalSaidas = totalSaidas + valorDespesa;
+    }
+
 
 }
