@@ -3,15 +3,76 @@ package controle_de_gastos.application;
 import controle_de_gastos.domain.Conta;
 import controle_de_gastos.domain.Usuario;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
-        Usuario usuario = new Usuario("Tiago", 123456);
-        Conta minhaConta = new Conta(usuario, 1010, 1000.0);
-        minhaConta.registrarEntrada(500.0);
-        minhaConta.registrarSaida(200.0);
-        minhaConta.calcularSaldo();
+        Scanner entrada = new Scanner(System.in);
 
-        System.out.println("Saldo Disponível = " + minhaConta.getSaldo());
+        System.out.println("-----------------------------");
+        System.out.println(" SYSTEM - CONTROLE FINANCEIRO");
+        System.out.println("-----------------------------");
+        System.out.println();
+
+        System.out.println("CRIANDO ACESSO");
+        Conta minhaConta = new Conta();
+        minhaConta.setUsuario(Usuario.criarUsuario(entrada));
+        System.out.println();
+
+        boolean apresetarMenu = true;
+
+        while (apresetarMenu == true) {
+
+            System.out.println("AÇÕES DISPONÍVEIS PARA REALIZAR");
+            System.out.println(" [1] - Registrar Entrada ");
+            System.out.println(" [2] - Registrar Saída   ");
+            System.out.print(" Digite a opção: ");
+            int opcaoSelecionada = entrada.nextInt();
+            System.out.println();
+
+            if ((opcaoSelecionada != 1) && (opcaoSelecionada != 2)) {
+                System.out.println("A opção selecionada não está disponível!");
+            }
+
+            switch (opcaoSelecionada) {
+
+                case 1:
+                    System.out.println("REGISTRANDO: ENTRADA");
+                    System.out.print("Digite o valor: R$");
+                    double valorEntrada = entrada.nextDouble();
+                    minhaConta.registrarEntrada(valorEntrada);
+                    System.out.println();
+                    break;
+
+                case 2:
+                    System.out.println("REGISTRANDO: SAÍDA");
+                    System.out.print("Digite o valor: R$");
+                    double valorSaida = entrada.nextDouble();
+                    minhaConta.registrarSaida(valorSaida);
+                    System.out.println();
+                    break;
+
+                // TODO implementar calcular saldo aqui.
+            }
+
+            System.out.print("Digite [TRUE] para continuar ou [FALSE] para sair: ");
+            apresetarMenu = entrada.nextBoolean();
+            System.out.println();
+        }
+
+        entrada.close();
+
+        System.out.println("=============================");
+        System.out.println("    EXTRATO BANCÁRIO     ");
+        System.out.println("=============================");
+        System.out.println("Titular: " + minhaConta.getUsuario().getNome());
+        System.out.println("-----------------------------");
+        System.out.printf("Total de Entradas: R$ %.2f%n", minhaConta.getEntrada());
+        System.out.printf("Total de Saídas: R$ %.2f%n", minhaConta.getSaida());
+        System.out.println("-----------------------------");
+        minhaConta.calcularSaldo();
+        System.out.printf("SALDO ATUAL = R$ %.2f%n", minhaConta.getSaldo());
+        System.out.println("=============================");
     }
 }

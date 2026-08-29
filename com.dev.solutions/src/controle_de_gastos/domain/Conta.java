@@ -8,6 +8,9 @@ public class Conta {
     private double entrada;
     private double saida;
 
+    public Conta() {
+    }
+
     public Conta(Usuario usuario, long numero, double saldoInicial) {
         if (saldoInicial < 0 ) {
             System.out.println("Saldo NÃO pode ser menor que ZERO!");
@@ -18,29 +21,45 @@ public class Conta {
         }
     }
 
-    public double getSaldo() {
-        return saldo;
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
     public long getNumero() {
         return numero;
     }
 
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public double getEntrada() {
+        return entrada;
+    }
+
+    public double getSaida() {
+        return saida;
+    }
+
     public void registrarEntrada(double valorDeEntrada) {
         if (valorDeEntrada > 0) {
-            System.out.println("Entrada registrada com sucesso: +R$" + valorDeEntrada);
+            System.out.printf("Entrada registrada com sucesso: +R$ %.2f%n", valorDeEntrada);
             entrada = valorDeEntrada;
         } else {
-            System.out.println("Valor de entrada inválido.");
+            System.out.println("Valor de entrada NÃO pode ser menor que ZERO.");
         }
     }
 
     public void registrarSaida(double valorGasto) {
         if (valorGasto > 0) {
-            System.out.println("Saída registrada com sucesso: -R$" + valorGasto);
+            System.out.printf("Saída registrada com sucesso: -R$ %.2f%n", valorGasto);
             saida = valorGasto;
         } else {
-            System.out.println("Valor de saída inválido.");
+            System.out.println("Valor de saída NÃO pode ser menor que ZERO.");
         }
     }
 
