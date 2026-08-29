@@ -10,16 +10,25 @@ public class Main {
 
         Scanner entrada = new Scanner(System.in);
 
-        System.out.println("-----------------------------");
-        System.out.println(" SYSTEM - CONTROLE FINANCEIRO");
-        System.out.println("-----------------------------");
-        System.out.println();
+        // 1. APRESENTAÇÃO INICIAL DO SISTEMA
+        System.out.println("**************************************************");
+        System.out.println("*                                                *");
+        System.out.println("*          SISTEMA DE CONTROLE FINANCEIRO        *");
+        System.out.println("*            Seu dinheiro sob controle           *");
+        System.out.println("*                                                *");
+        System.out.println("**************************************************");
+        System.out.println("\nBem-vindo ao assistente de extrato bancário.");
+        System.out.println("Pressione ENTER para começar a digitar os dados...");
+        entrada.nextLine(); // Aguarda o usuario apertar Enter para continuar
+        System.out.println("--------------------------------------------------\n");
 
+        // 2. ENTRADA DE DADOS
         System.out.println("CRIANDO ACESSO");
         Conta minhaConta = new Conta();
         minhaConta.setUsuario(Usuario.criarUsuario(entrada));
         System.out.println();
 
+        // 3. PROCESSAMENTO
         boolean apresetarMenu = true;
 
         while (apresetarMenu == true) {
@@ -63,6 +72,7 @@ public class Main {
 
         entrada.close();
 
+        // 4. APRESENTACAO DO EXTRATO.
         System.out.println("=============================");
         System.out.println("    EXTRATO BANCÁRIO     ");
         System.out.println("=============================");
