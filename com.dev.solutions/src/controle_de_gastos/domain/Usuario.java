@@ -7,14 +7,6 @@ public class Usuario {
     private String nome;
     private int identificacao;
 
-    public Usuario() {
-    }
-
-    public Usuario(String nome, int identificacao) {
-        this.nome = nome;
-        this.identificacao = identificacao;
-    }
-
     public String getNome() {
         return nome;
     }
@@ -23,17 +15,12 @@ public class Usuario {
         return identificacao;
     }
 
-    public static Usuario criarUsuario(Scanner entrada) {
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
-            Usuario usuario = new Usuario();
-
-            System.out.print("Digite o nome completo: ");
-            usuario.nome = entrada.nextLine();
-
-            System.out.print("Digite o identificador: ");
-            usuario.identificacao = entrada.nextInt();
-
-            return usuario;
+    public void setIdentificacao(int identificacao) {
+        this.identificacao = identificacao;
     }
 
 }

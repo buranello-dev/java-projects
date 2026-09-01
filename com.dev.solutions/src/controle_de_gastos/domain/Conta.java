@@ -8,25 +8,20 @@ public class Conta {
     private double entrada;
     private double saida;
 
-    public Conta() {
-    }
-
-    public Conta(Usuario usuario, long numero, double saldoInicial) {
-        if (saldoInicial < 0 ) {
-            System.out.println("Saldo NÃO pode ser menor que ZERO!");
-        } else {
-            this.usuario = usuario;
-            this.numero = numero;
-            this.saldo = saldoInicial;
-        }
-    }
-
     public Usuario getUsuario() {
         return usuario;
     }
 
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
+    }
+
+    public void setNumero(long numero) {
+        this.numero = numero;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
     }
 
     public long getNumero() {
