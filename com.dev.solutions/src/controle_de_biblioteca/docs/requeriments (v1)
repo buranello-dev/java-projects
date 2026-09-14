@@ -1,0 +1,79 @@
+istema Biblioteca
+
+O que ele faz:
+
+1. Cadastrar informações básicas (RF1)
+Utilizar: Variáveis / Tipos para representar, Operadores de incremento e descremento:
+- Nome do usuário
+- Idade do usuário
+- Usuario ativo/inativo
+- Nome de um livro
+- Livro disponivel/indisponivel
+- Quantidade de dias de atraso
+- Valor da multa por dia
+(OK)
+
+2. Calcular a multa (RF2)
+Utilizar: Operadores aritimeticos para calcular:
+- dias de atraso ( x )  valor da multa diaria
+(OK)
+
+3. Verificar se o usuário pode pegar o livro RF03
+Utilizar: Condicionais, Operadores de Comparação, Lógicos e Ternário (Regras):
+- Usuario precisa estar ativo (RN1) - OK
+E
+- Usuario precisa ter 18 anos ou mais (RN2) - OK
+E
+- Livro precisa estar disponível (RN3) - OK
+
+4. Criar um menu (RF3)
+Utilizar: Switch
+1 - Consultar livro
+2 - Emprestar livro
+3 - Devolver livro
+4 - Consultar multa
+
+5. Fazer o menu repetir (RF4)
+Utilizar: do while.
+- O programa deve continuar executando até o usuário escolher [5] - Sair.
+(OK)
+
+6. Criar validações
+- Exemplo: opção invalida. Digite uma opção entre 1 e 5. (RN4)
+( do 3 ao 6 posso utilizar: if, else, else-if, operadores logicos, comparacao, ternario e loops).
+(OK)
+
+A ideia é transformar isso em um projeto de estudo guiado.
+
+Você recebe uma funcionalidade: "O sistema precisa permitir que o usuário realize um empréstimo."
+
+E antes de escrever Java, você pensa:
+
+ENTRADAS > O que preciso receber?
+PROCESSAMENTO >  Quais regras preciso verificar?
+SAÍDAS > O que preciso informar ao usuário?
+RECURSOS JAVA > Quais ferramentas que já aprendi posso utilizar?
+
+Por exemplo:
+
+ENTRADAS
+- idade
+- usuário ativo
+- livro disponível
+
+PROCESSAMENTO
+- verificar idade
+- verificar usuário
+- verificar disponibilidade
+
+SAÍDA
+- empréstimo realizado
+- ou motivo da impossibilidade
+
+RECURSOS
+- variáveis
+- operadores
+- if/else
+- operadores lógicos
+
+Isso é muito mais importante para o seu aprendizado do que simplesmente conseguir escrever o código.

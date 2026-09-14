@@ -1,0 +1,46 @@
+7. Listar todos os livros cadastrados.
+
+1. O problema
+
+    Temos algo assim:
+    Livro: Java para Iniciantes.
+    Disponível: Sim.
+
+    Porém, uma biblioteca possui vários livros:
+    1. Clean Code
+    2. Java Efetivo
+    3. O Programador Pragmático
+    4. Código Limpo
+    5. Use a Cabeça! Java
+
+    Precisamos percorrer esses livros
+
+Fase 1 - Levatamento:
+
+Entrada:
+O que o sistema precisa ter para conseguir listar os livros?
+R: Um Array para armazenar os livros.
+
+Processamento:
+O que precisa acontecer para listar todos?
+R: Precisa usar um loop para percorrer cada posição do array e mostrar os livros em cada índice.
+
+Saída:
+O que será apresentado ao usuário?
+R: O nome de cada livro presente no array.
+
+Estruturas:
+Quais recursos Java você vai utilizar?
+R: Array e for.
+
+Fase 2 — Algoritmo
+
+Escreva em português, passo a passo, como você faria essa funcionalidade.
+Vou criar uma variável do tipo Array e vou inserir todos os livros disponíveis, depois vou usar um for para percorrer
+cada posição desse array e mostrar na tela para o usuário.
+
+Fase 3 — Java
+
+Só depois transforme seu algoritmo em código.
+
+(OK)

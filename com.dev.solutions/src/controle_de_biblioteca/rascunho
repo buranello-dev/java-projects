@@ -1,0 +1,40 @@
+FASE 1
+Fundamentos
+   ↓
+FASE 2
+Arrays e métodos
+   ↓
+FASE 3
+Classes e objetos
+   ↓
+FASE 4
+Encapsulamento
+   ↓
+FASE 5
+Composição
+   ↓
+FASE 6
+Enums
+   ↓
+FASE 7
+Collections
+   ↓
+FASE 8
+Exceptions
+   ↓
+FASE 9
+Streams / Lambdas
+   ↓
+FASE 10
+Arquivos / persistência
+   ↓
+FASE 11
+Banco de dados
+   ↓
+FASE 12
+Spring Boot + API REST
+
+Importante: não abandonar o projeto quando aprender algo novo. Pergunte:
+    "Como esse novo recurso Java pode melhorar o sistema?"
+
+Isso é exatamente a prática que estava procurando.

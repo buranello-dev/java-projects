@@ -1,5 +1,7 @@
 package controle_de_gastos.domain;
 
+import java.util.List;
+
 public class Conta {
 
     private Usuario usuario;
